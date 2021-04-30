@@ -328,5 +328,5 @@ void loop() {
 	/* Start Deep Sleep Mode */
   digitalWrite(POWER_CTRL, 0);
   delay(10);
-	sleepGo();
+  sleepGo();
 }
