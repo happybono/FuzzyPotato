@@ -32,7 +32,8 @@ The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. 
 * 3.7 V
 * 1200 mAh
 
-### MTTP charging module (6V)
+### MTTP charging module
+- 6.0 V
 
 ### Solar Panel & Battery
 - 6.0 V
