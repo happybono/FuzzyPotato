@@ -1,0 +1,63 @@
+<html>
+
+  <head>
+    <!-- 
+		NOTE: This plugin will not be visible on public views of a channel. 
+			    If you intend to make your channel public, consider using the
+			    MATLAB Visualization App to create your visualizations.
+    -->
+
+    %%PLUGIN_CSS%%
+    %%PLUGIN_JAVASCRIPT%%
+
+  
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+  <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <meta charset="utf-8">
+  </head>
+
+  <body onload="initPage()">
+    <table>
+      <colgroup>
+        <col span="1" style="width: 20%;">
+        <col span="1" style="width: 80%;">
+      </colgroup>
+      <tbody>
+        <tr>
+          <td class="data_title">Temperature</td>
+          <td id="temperature" class="data_value"></td>
+        </tr>
+        <tr>
+          <td class="data_title">Humidity</td>
+          <td id="humidity" class="data_value"></td>
+        </tr>
+        <tr>
+          <td class="data_title">Illuminance</td>
+          <td id="lx" class="data_value"></td>
+        </tr>
+        <tr>
+          <td class="data_title">Soil Moisture</td>
+          <td id="smoisture" class="data_value"></td>
+        </tr>
+        <tr>
+          <td class="data_title">Soil Salinity</td>
+          <td id="ssalinity" class="data_value"></td>
+        </tr>
+        <tr>
+          <td class="data_title">Battery</td>
+          <td id="battvolt" class="data_value"></td>
+        </tr>
+        <tr>
+          <td colspan="2" id="timestamp"></td>
+        </tr>
+      </tbody>
+    </table>
+            <div id="footer">
+              <p>ⓒ 2021 - 2022 <a href="https://www.happybono.net" style="color:#0f4c75">happybono</a>. All Rights Reserved.</p>
+          </div>
+        
+  </body>
+
+</html>
