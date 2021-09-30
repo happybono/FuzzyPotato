@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style type="text/css">
+@import url('//cdn.rawgit.com/young-ha/webfont-archive/master/css/Youth.css');
+@import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap'); 
+
+@font-face {
+    font-family: 'Bazzi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+	body {
+		background-color: #fff;
+	}
+	
+  	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	td {
+		padding: 8px;
+	}
+	
+	tr:nth-child(odd) {
+		background-color: #e3e4e8;
+	}
+	
+	.data_value {
+		color: #2a3a4a;
+		font-size: 1.06em;
+        font-family: 'Fresca', 'Bazzi', sans-serif;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+  	.data_title {
+		color: #2a3a4a;
+		font-size: 1.06em;
+        font-family: 'Fresca', 'Bazzi', sans-serif;
+		text-align: center;
+		font-weight: bold;
+	}
+  
+	#timestamp {
+		color: #2a3a4a;
+		font-size: 0.90em;
+        font-family: 'Fresca', 'Bazzi', sans-serif;
+		text-align: center;
+        font-weight: bold;
+	}
+  
+    #footer {
+    color : #9d9e9f;
+    font-size : 0.78em;  
+    font-family: 'Hind', sans-serif;   
+    text-align : center;
+    }
+  
+</style>
