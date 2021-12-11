@@ -8,6 +8,9 @@ The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. 
 ### v1.0
 #### April 30, 2021
 > [Initial Release](https://github.com/happybono/FuzzyPotato/commit/69261c0585d91c82cd700f809ad399d5e69eef05)
+  
+#### December 6, 2021
+> Now supports E-mail notifications.
 </details>
 
 ## Specifications
