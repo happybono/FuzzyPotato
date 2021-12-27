@@ -22,6 +22,8 @@ The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. 
 * Bluetooth: v4.2 BR/EDR and BLE (shares the radio with Wi-Fi)
 
 ## Appartus (Equipment)
+![FuzzyPotato_Equipments](FuzzyPotato_Equipments.jpg)
+
 ### Platform
 * ESP-32 Dev-Board
 
