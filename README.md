@@ -23,6 +23,7 @@ The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. 
 
 ## Appartus (Equipment)
 ![FuzzyPotato_Equipment](FuzzyPotato_Equipment.jpg)
+![FuzzyPotato_Assembled](FuzzyPotato_Assembled.jpg)
 
 ### Platform
 * ESP-32 Dev-Board
