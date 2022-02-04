@@ -57,7 +57,8 @@ void sleepGo() {
 	esp_sleep_enable_timer_wakeup( time_in_us );
 	esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_SLOW_MEM, ESP_PD_OPTION_ON);
 	
-	// Deep Sleep 절전 모드 진입 후 정해진 시간이 경과하면 setup() 함수를 자동으로 실행합니다.
+	// After entering Deep Sleep sleep mode, the setup() function is automatically executed when a set period of time has elapsed.
+	// Deep Sleep 절전 모드 진입 후 지정된 시간이 경과하면 setup() 함수를 자동으로 실행합니다.
 	esp_deep_sleep_start();
 }
 
@@ -193,12 +194,14 @@ float readLux()
   float   array[AVGCNT];
   float   lux = 0.0;
 
-  // 1초당 2ms 씩 samples 배열 크기 만큼 값을 계산합니다.
+  // Calculates a value equal to the size of the samples array at 2ms per second.
+  // 1 초당 2 ms 씩 samples 배열 크기 만큼 값을 계산합니다.
   for(int i=0; i<samples; i++) {
     array[i] = lightMeter.readLightLevel();
     delay(2);
   }
-
+  
+  // Sort the sample data using the sort function included in the C++ standard library.
   // C++ 의 표준라이브러리에 포함된 sort 함수를 사용해 샘플 데이터들을 정렬합니다.
   std::sort(array, array + samples);
   for(int i=0; i<samples; i++) {
@@ -221,6 +224,8 @@ float readBattery()
     int vref = 1100;
     uint16_t volt = analogRead(BATT_ADC);
 	  
+    // When detecting the remaining battery level, the maximum value is 3.3V, so the current operating voltage of 3.7V cannot be detected.
+    // Therefore, the parallel circuit calculation value is derived, so the result must be multiplied by 2.
     // 배터리 잔량 감지 시, 최고값이 3.3V 이므로 현재 작동 전압인 3.7V 를 감지할 수 없습니다, 
     // 따라서 회로 자체가 병렬로 검사한 결과로 나오기 때문에, 결과값에 2 를 곱해 주어야 합니다.
     float battery_voltage = ((float)volt / 4095.0) * 2.0 * 3.3 * (vref);
