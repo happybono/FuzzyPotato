@@ -44,7 +44,7 @@ const char* serverName = "http://api.thingspeak.com/update";
 String apiKey = "[ThingSpeak Write API Key]";
 
 void sleepGo() {
-//	const int sleepPeriod = 10800;  	/* 3 hour */
+//  const int sleepPeriod = 10800;    /* 3 hour */
     const int sleepPeriod = 3600;     /* 1 hour */
 //  const int sleepPeriod = 1800;     /* 30 minutes */
 
@@ -56,6 +56,8 @@ void sleepGo() {
 
 	esp_sleep_enable_timer_wakeup( time_in_us );
 	esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_SLOW_MEM, ESP_PD_OPTION_ON);
+	
+	// Deep Sleep 절전 모드 진입 후 정해진 시간이 경과하면 setup() 함수를 자동으로 실행합니다.
 	esp_deep_sleep_start();
 }
 
@@ -164,7 +166,8 @@ float readSoil()
     float per_soil = 0.0;
 
     soil = analogRead(SOIL_PIN);
-
+	  
+    // 토양 습도 데이터를 백분율 (%) 로 표시합니다.
     mapsoil = map(soil, 0, 4095, 4095, 0);
     per_soil = mapsoil * PERVALUE;
 
@@ -190,11 +193,13 @@ float readLux()
   float   array[AVGCNT];
   float   lux = 0.0;
 
+  // 1초당 2ms 씩 samples 배열 크기 만큼 값을 계산합니다.
   for(int i=0; i<samples; i++) {
     array[i] = lightMeter.readLightLevel();
     delay(2);
   }
 
+  // C++ 의 표준라이브러리에 포함된 sort 함수를 사용해 샘플 데이터들을 정렬합니다.
   std::sort(array, array + samples);
   for(int i=0; i<samples; i++) {
     if (i == 0 || i == samples-1)
@@ -215,6 +220,9 @@ float readBattery()
   for (int i = 0; i < samples; i++) {
     int vref = 1100;
     uint16_t volt = analogRead(BATT_ADC);
+	  
+    // 배터리 잔량 감지 시, 최고값이 3.3V 이므로 현재 작동 전압인 3.7V 를 감지할 수 없습니다, 
+    // 따라서 회로 자체가 병렬로 검사한 결과로 나오기 때문에, 결과값에 2 를 곱해 주어야 합니다.
     float battery_voltage = ((float)volt / 4095.0) * 2.0 * 3.3 * (vref);
 
     array[i] = battery_voltage;
@@ -237,10 +245,13 @@ void setup() {
 
 	/* Watchdog Timer Setup */
 	Serial.println("Configuring WDT...");
-	//enable panic so ESP32 restarts
-	esp_task_wdt_init(WDT_TIMEOUT, true);
-	//add current thread to WDT watch
+	// enable panic so ESP32 restarts
+	// watchDog 시작 기능을 60 초로 초기화합니다.
+	esp_task_wdt_init(WDT_TIMEOUT, true);   
+	// add current thread to WDT watch
+	// 현재 프로세스 Thread 를 watchDog 에 등록합니다.
 	esp_task_wdt_add(NULL);
+	
 
   //! Sensor power control pin , use deteced must set high
   pinMode(POWER_CTRL, OUTPUT);
@@ -279,6 +290,7 @@ void loop() {
   float bat = 0.0;
 
 	/* Watchdog Reset */
+	// 실행하면, 2 초 이상 소요되지 않습니다. 
 	esp_task_wdt_reset();
 
   /* Get Sensor Data */
