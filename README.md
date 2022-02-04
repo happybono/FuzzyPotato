@@ -13,7 +13,7 @@ The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. 
 > [Now supports E-mail notifications.](https://github.com/happybono/FuzzyPotato/blob/main/MATLAB%20Analysis/Email%20Notifications.m)
   
 #### February 4, 2022
-> Added comments within the source code.
+> [Added comments within the source code.](https://github.com/happybono/FuzzyPotato/blob/main/FuzzyPotato/FuzzyPotato.ino)
 </details>
 
 ## Specifications
