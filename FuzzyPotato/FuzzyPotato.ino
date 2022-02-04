@@ -45,8 +45,8 @@ String apiKey = "[ThingSpeak Write API Key]";
 
 void sleepGo() {
 //  const int sleepPeriod = 10800;    /* 3 hour */
-    const int sleepPeriod = 3600;     /* 1 hour */
-//  const int sleepPeriod = 1800;     /* 30 minutes */
+//  const int sleepPeriod = 3600;     /* 1 hour */
+    const int sleepPeriod = 1800;     /* 30 minutes */
 
 	uint64_t time_in_us;
 
