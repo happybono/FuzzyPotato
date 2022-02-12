@@ -281,7 +281,7 @@ void setup() {
 	Serial.print("Connected to WiFi network with IP Address: ");
 	Serial.println(WiFi.localIP());
 
-  /* ThingPost Sensor Setup */
+  /* Soil Temperature And Humidity Photometric Electrolyte Sensor Setup */
   dht12.begin();
 }
 
