@@ -51,7 +51,13 @@ function loadData() {
   document.getElementById('lx').innerHTML = p_lux + ' ㏓';
   document.getElementById('smoisture').innerHTML = p_smoist + ' %';
   document.getElementById('ssalinity').innerHTML = p_ssalinity + ' %';
-    document.getElementById('battvolt').innerHTML = p_battvolt + ' ㎷ / 4330.00 ㎷ (' + (100*(p_battvolt-2800)/(4330-2800)).toFixed(0) + ' %)';
+  //  document.getElementById('battvolt').innerHTML = p_battvolt + ' ㎷ / 4330.00 ㎷ (' + (100*(p_battvolt-2800)/(4330-2800)).toFixed(0) + ' %)';
+  if (p_battvolt >= 3066) {
+  document.getElementById('battvolt').innerHTML = p_battvolt + ' ㎷ / 4330.00 ㎷ (' + (100*(p_battvolt-2800)/(4330-2800)+5).toFixed(0) + ' %)';
+  }
+  if (p_battvolt < 3066) {
+  document.getElementById('battvolt').innerHTML = p_battvolt + ' ㎷ / 4330.00 ㎷ (' + (100*(p_battvolt-2800)/(4330-2800)-2.5).toFixed(0) + ' %)'; 
+  }
   document.getElementById('timestamp').innerHTML = '<i class="material-icons" style="font-size:1.08em;">update</i>' + " " + timestamp;
 }
 
