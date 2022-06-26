@@ -23,7 +23,7 @@ alertBodyCrit = sprintf("This email is to remind you that the battery level of s
 alertSubjectCrit = sprintf("The battery level of smart farms is critically low, needs recharge as soon as possible.");
 
 
-if SMoist <= 35
+if SMoist <= 50
     try
     webwrite(alertURL, "body", alertBodyMoist, "subject", alertSubjectMoist, options);
     catch someException
@@ -32,19 +32,19 @@ if SMoist <= 35
 end
 
 
-if Battery <= 2840
+if Battery <= 3790
     try
     webwrite(alertURL, "body", alertBodyInfo, "subject", alertSubjectInfo, options);
     catch someException
     fprintf("Failed to send alert: %s\n", someException.message);
     end
-elseif Battery <= 2670
+elseif Battery <= 3730
     try
     webwrite(alertURL, "body", alertBodyWarn, "subject", alertSubjectWarn, options);
     catch someException
     fprintf("Failed to send alert: %s\n", someException.message);
     end
-elseif Battery <= 2585
+elseif Battery <= 3500
     try
     webwrite(alertURL, "body", alertBodyCrit, "subject", alertSubjectCrit, options);
     catch someException
