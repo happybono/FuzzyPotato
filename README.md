@@ -18,7 +18,7 @@ The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. 
 #### March 4, 2022
 > [Uploaded required libraries.](https://github.com/happybono/FuzzyPotato/tree/main/Libraries)
   
-#### June 4, 2022
+#### June 27, 2022
 > [Improvements in the remaining battery calculation algorithm.](https://github.com/happybono/FuzzyPotato/blob/main/Plugins/StatusUpdates/JavaScript.js)
 </details>
 
