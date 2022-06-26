@@ -51,7 +51,7 @@ function outputData() {
   document.getElementById('lx').innerHTML = p_lux + ' ㏓';
   document.getElementById('smoisture').innerHTML = p_smoist + ' %';
   document.getElementById('ssalinity').innerHTML = p_ssalinity + ' %';
-  document.getElementById('battvolt').innerHTML = (4200-p_battvolt).toFixed(2) + ' ㎷ / ' + (4200-3250) + '㎷ (' + (100*(p_battvolt-3250)/(4200-3250)).toFixed(0) + ' %)';
+  document.getElementById('battvolt').innerHTML = (4200-p_battvolt).toFixed(2) + ' ㎷ / ' + (4200-3250) + ' ㎷ (' + (100*(p_battvolt-3250)/(4200-3250)).toFixed(0) + ' %)';
   document.getElementById('timestamp').innerHTML = '<i class="material-symbols-rounded" style="font-size:1.17em";">potted_plant</i>' + " " + timestamp;
 }
 
