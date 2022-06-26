@@ -1,7 +1,7 @@
 # FuzzyPotato
 The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. (Temperature, Humidity, Illuminance (Lux), Soil Moisture, Soil Salinity, Battery Voltage)
 
-![FuzzyPotato_TSChannel](Web capture_27-6-2022_05925_thingspeak.com.jpeg)
+![FuzzyPotato_TSChannel](Web capture_27-6-2022_05925_thingspeak.com.jpg)
 
 ## What's New
 <details>
