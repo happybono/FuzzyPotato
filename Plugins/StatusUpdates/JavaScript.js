@@ -44,21 +44,15 @@ function loadData() {
   });
 }
   
-  function outputData() {
+function outputData() {
   // update page
   document.getElementById('temperature').innerHTML = p_temp + ' °C';
   document.getElementById('humidity').innerHTML = p_humi + ' %';
   document.getElementById('lx').innerHTML = p_lux + ' ㏓';
   document.getElementById('smoisture').innerHTML = p_smoist + ' %';
   document.getElementById('ssalinity').innerHTML = p_ssalinity + ' %';
-  //  document.getElementById('battvolt').innerHTML = p_battvolt + ' ㎷ / 4330.00 ㎷ (' + (100*(p_battvolt-2800)/(4330-2800)).toFixed(0) + ' %)';
-  if (p_battvolt >= 3066) {
-  document.getElementById('battvolt').innerHTML = p_battvolt + ' ㎷ / 4330.00 ㎷ (' + (100*(p_battvolt-2800)/(4330-2800)+5).toFixed(0) + ' %)';
-  }
-  if (p_battvolt < 3066) {
-  document.getElementById('battvolt').innerHTML = p_battvolt + ' ㎷ / 4330.00 ㎷ (' + (100*(p_battvolt-2800)/(4330-2800)-2.5).toFixed(0) + ' %)'; 
-  }
-  document.getElementById('timestamp').innerHTML = '<i class="material-icons" style="font-size:1.08em;">update</i>' + " " + timestamp;
+  document.getElementById('battvolt').innerHTML = (4200-p_battvolt).toFixed(2) + ' ㎷ / 950 ㎷ (' + (100*(p_battvolt-3250)/(4200-3250)).toFixed(0) + ' %)';
+  document.getElementById('timestamp').innerHTML = '<i class="material-symbols-rounded" style="font-size:1.17em";">potted_plant</i>' + " " + timestamp;
 }
 
 </script>
