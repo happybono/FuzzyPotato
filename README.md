@@ -59,13 +59,13 @@ The solar-powered an IoT-based system for monitoring environmental conditions us
 - **`readBattery()`** : Reads and averages battery voltage data.
 
 #### Example Output
-Temperature = 23.45
-Humidity    = 56.78
-soil = 12.34
-salt = 1.23
-lux = 456.78
-bat = 3.70
-HTTP Response code: 200
+Temperature = 23.45 </br>
+Humidity    = 56.78 </br>
+soil = 12.34 </br>
+salt = 1.23 </br>
+lux = 456.78 </br>
+bat = 3.70 </br>
+HTTP Response code : 200 </br>
 
 ## Hardware Specifications
 ### Connections
