@@ -24,7 +24,7 @@ The solar-powered an IoT-based system for monitoring environmental conditions us
 > [Improvements in the remaining battery calculation algorithm.](https://github.com/happybono/FuzzyPotato/blob/main/Plugins/StatusUpdates/JavaScript.js)
 </details>
 
-#### Key Features
+#### Features
 - **Real-time Sensor Data Collection:** Measures temperature, humidity, soil moisture, soil salinity, light intensity, and battery voltage.
 - **Data Transmission:** Sends sensor data to the ThingSpeak server for remote monitoring and analysis.
 - **Power Management:** Utilizes deep sleep mode to conserve power and extend battery life.
