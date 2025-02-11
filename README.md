@@ -1,5 +1,5 @@
 # FuzzyPotato
-The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. (Temperature, Humidity, Illuminance (Lux), Soil Moisture, Soil Salinity, Battery Voltage)
+The solar-powered an IoT-based system for monitoring environmental conditions using various sensors and transmitting the data to a server with the ESP32 micro-controller unit. (Temperature, Humidity, Illuminance (Lux), Soil Moisture, Soil Salinity, Battery Voltage) The system is designed to operate on an ESP32 microcontroller, utilizing Wi-Fi for connectivity and deep sleep mode for power conservation.
 <br><br>
 ![FuzzyPotato_TSChannel](Web_capture_27-6-2022_05925.png)
 
@@ -24,8 +24,51 @@ The solar-powered smart-flowerpot project with the ESP32 micro-controller unit. 
 > [Improvements in the remaining battery calculation algorithm.](https://github.com/happybono/FuzzyPotato/blob/main/Plugins/StatusUpdates/JavaScript.js)
 </details>
 
+#### Key Features
+- **Real-time Sensor Data Collection:** Measures temperature, humidity, soil moisture, soil salinity, light intensity, and battery voltage.
+- **Data Transmission:** Sends sensor data to the ThingSpeak server for remote monitoring and analysis.
+- **Power Management:** Utilizes deep sleep mode to conserve power and extend battery life.
+- **Watchdog Timer:** Ensures system stability and automatic recovery in case of failures.
 
-## Specifications
+#### Sensors and Components
+- **DHT12 Sensor:** Measures temperature and humidity.
+- **BH1750 Sensor:** Measures light intensity.
+- **Analog Pins:** Measures soil moisture, soil salinity, and battery voltage.
+- **Power Control Pin:** Manages the power to the sensors to conserve energy.
+
+#### Implementation Details
+- **Language:** C++
+- **Platform:** Arduino/ESP32
+- **Libraries:** WiFi, HTTPClient, esp_task_wdt, esp_system, Arduino, DHT12, Wire, BH1750
+
+#### Code Structure
+- **WiFi Setup:** Connects to the specified Wi-Fi network using provided SSID and password.
+- **Sensor Initialization:** Initializes the I2C bus and sensors.
+- **Data Collection Functions:** Reads data from each sensor and calculates average values.
+- **HTTP POST Request:** Sends collected sensor data to the ThingSpeak server.
+- **Deep Sleep Function:** Puts the ESP32 into deep sleep mode to save power between data collection cycles.
+
+#### Functions and Methods
+- **`setup()`**: Initializes serial communication, Wi-Fi connection, sensors, and watchdog timer.
+- **`loop()`**: Collects sensor data, sends it to the server, and enters deep sleep mode.
+- **`sleepGo()`**: Configures and enters deep sleep mode for a specified duration.
+- **`readTemp()`**: Reads and averages temperature data from the DHT12 sensor.
+- **`readHumi()`**: Reads and averages humidity data from the DHT12 sensor.
+- **`readSalt()`**: Reads and averages soil salinity data.
+- **`readSoil()`**: Reads and averages soil moisture data.
+- **`readLux()`**: Reads and averages light intensity data from the BH1750 sensor.
+- **`readBattery()`**: Reads and averages battery voltage data.
+
+#### Example Output
+Temperature = 23.45
+Humidity    = 56.78
+soil = 12.34
+salt = 1.23
+lux = 456.78
+bat = 3.70
+HTTP Response code: 200
+
+## Hardware Specifications
 ### Connections
 * 1 x USB-C
 
