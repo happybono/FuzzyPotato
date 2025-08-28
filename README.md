@@ -19,10 +19,10 @@ The solar-powered an IoT-based system for monitoring environmental conditions us
   
 #### March 4, 2022
 > [Uploaded required libraries.](https://github.com/happybono/FuzzyPotato/tree/main/Libraries)
-  
+</details>
+
 #### June 27, 2022
 > [Improvements in the remaining battery calculation algorithm.](https://github.com/happybono/FuzzyPotato/blob/main/Plugins/StatusUpdates/JavaScript.js)
-</details>
 
 ### Features
 - **Real-time Sensor Data Collection :** Measures temperature, humidity, soil moisture, soil salinity, light intensity, and battery voltage.
