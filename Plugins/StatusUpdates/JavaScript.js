@@ -155,7 +155,9 @@ function outputData() {
   document.getElementById('battvolt');
   updateValue(
     'battvolt',
-    (p_battvolt-3250).toFixed(2) + ' ㎷ / ' + (4200-3250) + ' ㎷ (' + (100*(p_battvolt-3250)/(4200-3250)).toFixed(0) + ' %)'
+    (p_battvolt - 3250).toFixed(2) + ' ㎷ / ' +
+    (4200 - 3250) + ' ㎷ (' +
+    (100 * (p_battvolt - 3250) / (4200 - 3250)).toFixed(0) + ' %)'
   );
 
   // Update timestamp so that the fixed icon remains intact while the text animates
@@ -163,7 +165,7 @@ function outputData() {
     'timestamp',
     timestamp,
     'timestamp_text',
-    '<i class="material-symbols-rounded" style="font-size:1.17em";"&gt;potted_plant</i> '
+    '<i class="material-symbols-rounded" style="font-size:1.17em;">potted_plant</i> '
   );
 }
 
