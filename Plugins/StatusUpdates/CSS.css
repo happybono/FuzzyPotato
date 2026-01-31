@@ -3,111 +3,120 @@
 @import url('//cdn.rawgit.com/young-ha/webfont-archive/master/css/Youth.css');
 @import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap'); 
-  
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
 @font-face {
-    font-family: 'KNPSKkomi-Regular00';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'KNPSKkomi-Regular00';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KNPSKkomi-Regular00.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-  
+
 @font-face {
   font-family: 'Segoe UI Variable Display';
   src: local('Segoe UI Variable Display'),
-    url('/fonts/SegoeUIVF-all.ttf') format('truetype-variations');
+       url('/fonts/SegoeUIVF-all.ttf') format('truetype-variations');
   font-variation-settings: 'opsz' 17;
   font-weight: 300 700;
   font-style: normal;
 }
-  
-.material-symbols-rounded {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-  
+
 @font-face {
-    font-family: 'Bazzi';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-  
-	body {
-		background-color: #fff;
-	}
-	
-  	table {
-		width: 100%;
-		border-collapse: collapse;
-	}
-	
-	td {
-		padding: 5.07px;
-	}
-	
-	tr:nth-child(odd) {
-        background-color: #d8ebf6;
-	}
-	
-	.data_value {
-		color: #2a3a4a;
-		font-size: 1.06em;
-        font-family: 'Fresca', sans-serif;
-		text-align: center;
-		font-weight: bold;
-	}
-	
-  	.data_title {
-		color: #2a3a4a;
-		font-size: 1.06em;
-        font-family: 'Fresca', sans-serif;
-		text-align: center;
-		font-weight: bold;
-	}
-  
-	#timestamp {
-		color: #2a3a4a;
-		font-size: 0.90em;
-        font-family: 'Fresca', 'KNPSKkomi-Regular00', sans-serif;
-		text-align: center;
-        font-weight: bold;
-	}
-  
-    #footer {
-    color : #9d9e9f;
-    font-size : 0.78em;  
-    font-family: 'Segoe UI Variable Display', sans-serif;   
-    text-align : center;
-    }
-  
-/* --- Flip animation for per-character updates --- */
-.data_value span {
-    display: inline-block;
-    position: relative;
+  font-family: 'Bazzi';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
+body {
+  background-color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 5.07px;
+}
+
+tr:nth-child(odd) {
+  background-color: #d8ebf6;
+}
+
+.data_value {
+  color: #2a3a4a;
+  font-size: 1.06em;
+  font-family: 'Fresca', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.data_title {
+  color: #2a3a4a;
+  font-size: 1.06em;
+  font-family: 'Fresca', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+#timestamp {
+  color: #2a3a4a;
+  font-size: 0.90em;
+  font-family: 'Fresca', 'KNPSKkomi-Regular00', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+#footer {
+  color: #9d9e9f;
+  font-size: 0.78em;
+  font-family: 'Segoe UI Variable Display', sans-serif;
+  text-align: center;
+}
+
+/* Per-character spans */
+.data_value span,
+#timestamp span {
+  display: inline-block;
+  position: relative;
+}
+
+/* Flip animation */
 .flipping {
-    display: inline-block;
-    animation: flip 0.6s ease-in-out;
+  display: inline-block;
+  animation: flip 0.6s ease-in-out;
 }
 
 @keyframes flip {
-    0%   { transform: rotateX(0deg); }
-    50%  { transform: rotateX(-90deg); }
-    100% { transform: rotateX(0deg); }
+  0%   { transform: rotateX(0deg); }
+  50%  { transform: rotateX(-90deg); }
+  100% { transform: rotateX(0deg); }
 }
 
-/* --- Responsive styles --- */
+/* Keep timestamp text font consistent (spans created by updateValue inherit timestamp font) */
+#timestamp .ts-text span {
+  font: inherit;
+}
+
+/* Apply Material Symbols font only to the icon */
+#timestamp .material-symbols-rounded {
+  font-family: "Material Symbols Rounded" !important;
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Responsive styles */
 @media screen and (max-width: 768px) {
-    table {
-        font-size: 0.9em;
-    }
-    td {
-        padding: 6px;
-    }
-}    
+  table { font-size: 0.9em; }
+  td { padding: 6px; }
+}
+    
 </style>
