@@ -19,10 +19,14 @@ The solar-powered an IoT-based system for monitoring environmental conditions us
   
 #### March 4, 2022
 > [Uploaded required libraries.](https://github.com/happybono/FuzzyPotato/tree/main/Libraries)
-</details>
 
 #### June 27, 2022
 > [Improvements in the remaining battery calculation algorithm.](https://github.com/happybono/FuzzyPotato/blob/main/Plugins/StatusUpdates/JavaScript.js)
+</details>
+
+#### January 31, 2026
+> [Applied text flipping animation to the "Latest PM sensor readings" plugin.](https://github.com/happybono/FinedustMonitorWithGPS/tree/master/Plugins/StatusUpdates)
+</details>
 
 ### Features
 - **Real-time Sensor Data Collection :** Measures temperature, humidity, soil moisture, soil salinity, light intensity, and battery voltage.
@@ -110,5 +114,4 @@ HTTP Response code : 200 </br>
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Copyright 
-### Copyright
-Copyright ⓒ HappyBono 2021 - 2025. All rights Reserved.
+Copyright ⓒ HappyBono 2021 - 2026. All rights Reserved.
