@@ -2,6 +2,7 @@
 
 // set your channel id here
 var channel_id = '[ThingSpeak Channel ID]';
+
 // set your channel's read api key here if necessary
 var api_key = '[ThingSpeak Read API Key]';
 
