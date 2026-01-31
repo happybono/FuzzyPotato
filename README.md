@@ -16,7 +16,8 @@ The solar-powered an IoT-based system for monitoring environmental conditions us
   
 #### February 4, 2022
 > [Added comments within the source code.](https://github.com/happybono/FuzzyPotato/blob/main/FuzzyPotato/FuzzyPotato.ino)
-  
+
+### v2.0 
 #### March 4, 2022
 > [Uploaded required libraries.](https://github.com/happybono/FuzzyPotato/tree/main/Libraries)
 
