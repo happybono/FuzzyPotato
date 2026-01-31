@@ -25,7 +25,7 @@ The solar-powered an IoT-based system for monitoring environmental conditions us
 </details>
 
 #### January 31, 2026
-> [Applied text flipping animation to the "Latest PM sensor readings" plugin.](https://github.com/happybono/FinedustMonitorWithGPS/tree/master/Plugins/StatusUpdates)
+> [Applied text flipping animation to the "Latest Smart-flowerpot Sensor Readings" plugin.](https://github.com/happybono/FuzzyPotato/blob/main/Plugins/StatusUpdates/JavaScript.js)
 </details>
 
 ### Features
