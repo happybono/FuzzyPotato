@@ -102,7 +102,7 @@ tr:nth-child(odd) {
 
 /* Apply Material Symbols font only to the icon */
 #timestamp .material-symbols-rounded {
-  font-family: "Material Symbols Rounded" !important;
+  font-family: "Material Symbols Rounded";
   font-variation-settings:
     'FILL' 1,
     'wght' 400,
