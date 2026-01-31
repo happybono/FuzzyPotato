@@ -92,7 +92,7 @@ function animateDigit(span, start, end) {
   }
 }
 
-/* Update an element’s content with per-character flip animation.
+/* Update an element's content with per-character flip animation.
    - Splits the new value into characters.
    - Generates a span for each character with a unique id so we can update it later.
    - Supports fixed prefix HTML (e.g., a static icon) while animating only the text part.
