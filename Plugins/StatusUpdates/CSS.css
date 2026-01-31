@@ -15,7 +15,7 @@
 @font-face {
   font-family: 'Segoe UI Variable Display';
   src: local('Segoe UI Variable Display'),
-    url('/fonts/SegoeUIVF-all.tff') format('truetype-variations');
+    url('/fonts/SegoeUIVF-all.ttf') format('truetype-variations');
   font-variation-settings: 'opsz' 17;
   font-weight: 300 700;
   font-style: normal;
